@@ -5,6 +5,10 @@
 - In order to use Redux in a react project, we need two packages:
 ???
 
+### File/Folder Structuring
+
+
+
 ### Redux Vocabulary
 - Store
  Used to store _____ in a central place

@@ -3,9 +3,9 @@ import React from 'react'
 import Post from './Post'
 
 import { connect } from 'react-redux'
-import { FETCH_MY_POSTS } from '../redux/types'
 
-import { myWallPosts } from '../helper/data'
+import { getMyPosts } from '../redux/actions'
+
 import CreateNewPost from './CreateNewPost';
 
 
@@ -18,7 +18,7 @@ class MyWall extends React.Component {
     // Once the component mounts we need to get some data!
     // THIS LINE OF CODE WOULD HAPPEN IN OUR THEN AFTER THE FETCH
     // this.props.dispatch({ type: FETCH_MY_POSTS, payload: myWallPosts })
-    this.props.getMyPosts(myWallPosts)
+    this.props.getMyPosts()
   }
 
   render(){
@@ -40,7 +40,7 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getMyPosts: (myWallPosts) => { dispatch({ type: FETCH_MY_POSTS, payload: myWallPosts }) }
+    getMyPosts: () => { dispatch(getMyPosts()) }
   }
 }
 

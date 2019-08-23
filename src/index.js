@@ -11,11 +11,13 @@ import reducer from './redux/reducer'
 
 import { Provider } from 'react-redux'
 
+import thunk from 'redux-thunk'
+
 // FOLLOW UP: Does it need additional data? If so, where does that
 // data come from? Is there anything we need to setup?
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducer, applyMiddleware(thunk))
 
 // TIP: If you want to use your reduxdevtools, you're going to want
 // to use this line: window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

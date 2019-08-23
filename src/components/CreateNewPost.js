@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
-import { CREATE_POST } from '../redux/types'
 import { connect } from 'react-redux'
+
+import { createPost} from '../redux/actions'
 
 class CreateNewPost extends Component {
 
@@ -25,7 +26,7 @@ class CreateNewPost extends Component {
     e.preventDefault()
 
     // 1. I need to update the store - happens here
-    this.props.dispatch({type: CREATE_POST, payload: this.state })
+    this.props.dispatch(createPost(this.state.content, 1))
     // 2. We need to the store what it should look like afterwards - reducers
   }
 
