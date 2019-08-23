@@ -1,5 +1,8 @@
 import React from 'react'
 
+// DOES THIS COMPONENT NEED TO BE CONNECTED TO THE STORE?
+// WHERE IS THIS COMPONENT GETTING ITS VALUES FROM?
+
 export default function Post(props){
-  return (<p>Post</p>)
+  return (<li>some content</li>)
 }

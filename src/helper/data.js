@@ -18,7 +18,7 @@ export const fullFirstUserData = {
 
 
 // My feed is composed of posts I have made and what other users have made
-export const myTimeline = [
+export const myWallPosts = [
   {
     id: 1,
     content: 'Cool Story',
