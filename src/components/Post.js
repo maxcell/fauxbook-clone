@@ -4,5 +4,5 @@ import React from 'react'
 // WHERE IS THIS COMPONENT GETTING ITS VALUES FROM?
 
 export default function Post(props){
-  return (<li>some content</li>)
+  return (<li>{props.post.content}</li>)
 }
