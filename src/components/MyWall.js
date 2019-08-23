@@ -40,7 +40,8 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getMyPosts: () => { dispatch(getMyPosts()) }
+ // getMyPosts: () => { dispatch(getMyPosts()) }
+    getMyPosts: getMyPosts // Ya boi made a mistake and is fixing his mistake
   }
 }
 
