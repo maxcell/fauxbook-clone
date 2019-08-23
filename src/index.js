@@ -9,7 +9,7 @@ import App from './components/App';
 // HINT: What component do I need to have?
 
 // FOLLOW UP: Does it need additional data? If so, where does that
-// data come from?
+// data come from? Is there anything we need to setup?
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
