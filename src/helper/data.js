@@ -13,7 +13,7 @@ export const firstUserData = {
 export const fullFirstUserData = {
   ...firstUserData,
   password_digest: 'sfljkasfljasklfjaslfjafjas',
-  dob: '1989-03-08'
+  dob: '1900-03-08'
 }
 
 

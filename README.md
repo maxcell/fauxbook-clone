@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Redux
 
-## Available Scripts
+### Recap
 
-In the project directory, you can run:
+- In order to use Redux in a react project, we need two packages:
+???
 
-### `npm start`
+### Redux Vocabulary
+- Store
+ Used to store _____ in a central place
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Reducer
+ A _____ used to make changes to state. Must take in _____ and an _____ as arguments
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Dispatch
+ A _____ called on store that calls the _____ function and passes in up to two arguments: a required argument of an object that must have a key named _____ and an optional argument called _____ that holds any additional information needed.
 
-### `npm test`
+- Action
+ The parameter that represents the second argument passed into the _____ function. An action is an _____ with a key named "type"
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Connect
+ A _____ component that is used to give components access to _____ in the form of a function, mapStateToProps, and _____ in the form of a function, mapDispatchToProps
 
-### `npm run build`
+- mapStateToProps
+ A function used to pass parts of _____ into a component's _____
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- mapDispatchToProps
+ A function used to give components access to _____ that call on the store's _____ function
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### New Things
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Action Creators
 
-### `npm run eject`
+To make our lives easier, we build functions that build out actions for us!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Redux Thunk
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To help the asynchronous stuff that we need to handle, we use this tool to make it easer for us to keep things in sync. We'll install an additional package called `redux-thunk` and then change up our action creators a bit
